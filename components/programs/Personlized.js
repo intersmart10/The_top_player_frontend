@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styles from "@/styles/Program.module.scss";
 import { useRouter } from "next/router";
 
-const Personlized = ({ Lang }) => {
+const Personlized = ({ Lang, videoUrl }) => {
   const { t } = useTranslation();
   const router = useRouter();
   const currentPath = router.pathname;
@@ -257,7 +257,7 @@ const Personlized = ({ Lang }) => {
                 aria-label="video player"
               >
                 <source
-                  src="https://backend.thetopplayer.com/courseImages/video-1715945249482.mov"
+                  src={`https://backend.thetopplayer.com/courseImages/${videoUrl}`}
                   type="video/mp4"
                 />
               </video>

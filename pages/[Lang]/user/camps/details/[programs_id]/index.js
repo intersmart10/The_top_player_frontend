@@ -54,6 +54,8 @@ const Fitness = ({
   error_Text,
   CourseByIdArray,
 }) => {
+  console.log("CourseByIdArray===>", CourseByIdArray);
+  console.log("CoursecArr=====>", CoursecArr);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -133,7 +135,7 @@ const Fitness = ({
         <>{parseInt(CoursecArr.subCourses[0].id) === 2 && <FitnessProgram styles={styles} Lang={Lang} />}</>
       )} */}
 
-      <Personlized Lang={Lang} />
+      <Personlized Lang={Lang} videoUrl={CourseByIdArray?.videoUrl}/>
 
       {/* {!CoursecArr || expired ? (
         <TrainingVideo Lang={Lang} CourseByIdArray={CourseByIdArray} />
